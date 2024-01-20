@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    background-color: #232f23;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header h1 {
+    color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+header a svg {
+    font-size: 30px;
+    color: #fff;
+    &:hover {
+        color: rgb(10,88,202);
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header a span {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.products .product img {
+    max-width: 100%;
+}
+
+.products .product .name {
+    font-size: 16px;
+}
+
+.cart table tbody tr td {
+    vertical-align: middle;
+}
+
+input {
+    outline: none;
+}
+
+.cart table tbody tr td:first-of-type {
+    max-width: 450px;
+}
+
+.cart table tbody tr td:first-of-type div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart table tbody tr td img {
+    width: 100px;
 }
